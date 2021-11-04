@@ -3,12 +3,12 @@ const wordSearch = (letters, word) => {
   const verticalJoin = [];
   //   console.log("test", horizontalJoin);
 
-  for (let i = 0; i < letters.length; i++) {
+  for (let i = letters.length - 1; i >= 0; i--) {
     let words = "";
-    for (let j = 0; j < letters[i].length; j++) {
-      words += letters[j][i];
+    for (let j = letters[i].length - 1; j >= 0; j--) {
+      words += letters[i][j];
     }
-    // console.log("test 2", words);
+    console.log("test 2", words);
     verticalJoin.push(words);
   }
   // i = 0 {j = 0,1,2,3,4,5,6,7,8,9} A S Y H ....
